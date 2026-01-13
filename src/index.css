@@ -1,13 +1,52 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: linear-gradient(135deg, #001f3f, #000000);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00bfff; }
+  to { text-shadow: 0 0 30px #00bfff, 0 0 50px #8a2be2; }
+}
+
+.button-glow {
+  background: linear-gradient(45deg, #00bfff, #8a2be2);
+  border: none;
+  padding: 15px 40px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 0 20px #00bfff;
+  transition: all 0.3s;
+}
+
+.button-glow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00bfff, 0 0 60px #8a2be2;
+}
+
+/* 粒子背景容器 */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
