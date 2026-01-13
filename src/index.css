@@ -50,38 +50,34 @@ body {
   height: 100%;
   z-index: -1;
 }
-/* 手機版 (寬度 < 768px) */
+
+/* 手機版適應 (寬度 < 768px) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 36px !important; /* 標題變小 */
+    font-size: 36px !important;
   }
-
-  div[style*="display: flex"] { /* 三區塊變豎排 */
+  div[style*="display: flex"] {
     flex-direction: column !important;
   }
-
-  motion.div { /* 區塊寬度變全屏 */
+  motion.div {
     width: 100% !important;
   }
-
-  .button-glow { /* 按鈕變小 */
+  .button-glow {
     font-size: 20px !important;
     padding: 10px 30px !important;
   }
-
-  /* 聊天框調小 */
+  /* 聊天框適應手機 */
   div[style*="maxWidth: 400px"] {
     max-width: 100% !important;
     padding: 10px !important;
   }
 }
 
-/* 平板版 (寬度 768px - 1024px) */
+/* 平板版適應 (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 48px !important;
   }
-
   motion.div {
     width: 45% !important;
   }
